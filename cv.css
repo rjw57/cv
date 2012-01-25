@@ -1,0 +1,78 @@
+/* Use font from GWF */
+@import url(http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700);
+
+/* Notes: we keep to a 12pt grid layout. */
+
+/* DEVELOPMENT: Show grid. */
+body.dev { background-image: url('img/2x2-checkerboard.png'); background-size: 24pt; }
+
+/* Top-level style. */
+html {
+  /* text */
+  font-family: 'Alegreya', serif;
+  font-size: 11pt;
+  line-height: 12pt;
+
+  /* background */
+  background-color: white;
+
+  /* layout */
+  margin: 0;
+  padding: 0;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* Reset padding/margin */
+h1, h2, h3, ul, ol, li { margin: 0; padding: 0; }
+
+/* Content is within central column. */
+body { width: 552pt; margin: 0 auto; padding: 0; }
+
+/* Header */
+header { margin: 12pt 0 11pt 0; border-bottom: solid 1pt black; }
+header h1 { white-space: nowrap; display: table-cell; font-size: 24pt; line-height: 24pt; font-weight: bold; }
+header address { width: 100%; display: table-cell; text-align: right; }
+ul.contact {
+  text-align: justify;
+  margin-top: 12pt;
+  font-size: 11pt;
+  width: 100%;
+}
+ul.contact span { display: inline-block; width: 100%; height: 0; }
+ul.contact li { display: inline; height: 24pt; }
+ul.contact li { text-align: left; }
+
+a.email, a.twitter, a.gplus, a.web {
+  margin-left: -2.5pt; /* correct for overhang of icon */
+  line-height: 12pt;
+  font-size: 12pt;
+}
+
+ul.contact li a img { height: 24pt; vertical-align: -33%; margin-right: 4pt; }
+
+/*
+a.email { background-image: url(img/email.png); }
+a.twitter { background-image: url(img/twitter.png); }
+a.gplus { background-image: url(img/gplus.png); }
+a.web { background-image: url(img/web.png); }
+*/
+
+/* Main style */
+
+section h1 {
+  margin: 0;
+  font-size: 11pt;
+  line-height: 12pt;
+  float: left;
+  width: 132pt;
+  font-variant: small-caps;
+  font-weight: bold;
+  text-align: right;
+}
+section > * { margin-left: 144pt; }
+section h2 { font-size: 11pt; line-height: 12pt; font-weight: bold; margin-bottom: 6pt; }
+section .role, section .date { display: table-cell; white-space: nowrap; width: 100%; }
+section .role { padding-left: 144pt; line-height: 12pt; font-style: italic; }
+section .date { text-align: right; line-height: 12pt; }
+section .description { clear: both; margin: 6pt 0pt 12pt 144pt; text-align: justify; }

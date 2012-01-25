@@ -1,0 +1,6 @@
+set sw=2
+set sts=2
+set tw=80
+set et
+set spell
+set spelllang=en_gb
