@@ -29,11 +29,13 @@
         <div class="span3 contact-pane">
           <table class="contact-information">
             <tr>
+              <!-- The email address link itself is filled in via JavaScript to make life a little harder for spammers. -->
               <td class="contact-type"><abbr title="email address" class="icon icon-envelope"><span class=
               "accessibility-label">Email:</span></abbr></td>
 
               <td>
-                <a href="mailto:rjw57@cantab.net">rjw57@cantab.net</a>
+                <!-- We do not use JavaScript obfuscation here because I want the page to render without JavaScript -->
+                <a id="email-address">rj<span style="display:none;">REMOVETHIS</span>w57<!-- -->@<!-- -->can<!-- -->tab.net</a>
               </td>
             </tr>
 
@@ -321,6 +323,11 @@
       </div>
     </section>
   </div>
+  <script>
+    // This is just a way to stop the email address being trivially parseable by a spam bot. It is at best obfuscation.
+    var address = 'mail' + 'to' + ':rjw' + (32 + 25) + String.fromCharCode(64) + 'batnac'.split('').reverse().join('') + '.net';
+    document.getElementById('email-address').setAttribute('href', address);
+  </script>
 </body>
 </html>
 
