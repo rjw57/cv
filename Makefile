@@ -1,14 +1,30 @@
-all: cv.css index.html
+BUILD=build
+STATIC=static
+
+OUTPUTS=$(addprefix $(BUILD)/, cv.css index.html)
+
+all: $(OUTPUTS) static
 
 clean:
-	rm cv.css index.html
+	rm -rf $(OUTPUTS)
+	rm -rf $(BUILD) 
 
-%.html: %.in.html
+# Update the build directory from the static directory via rsync
+static: $(BUILD)
+	rsync -r $(STATIC)/ $(BUILD)
+
+deploy: all
+	rsync -rz --chmod=Dugo+rx,ugo+r --perms $(BUILD)/ richwareham.com:/var/www/richwareham.com/htdocs/cv
+
+$(BUILD):
+	mkdir -p $(BUILD)
+
+$(BUILD)/%.html: %.in.html $(BUILD)
 	tidy -q -ashtml -w 0 -o "$@" "$<"
 
-%.css: %.less
+$(BUILD)/%.css: %.less $(BUILD)
 	lessc --yui-compress "$<" "$@"
 
-.PHONY: all clean
+.PHONY: all clean deploy static
 
 # vim:noet
