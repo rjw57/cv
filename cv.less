@@ -36,11 +36,19 @@ section { background-color: @section-bg; }
 header { background-color: @heading-bg; }
 h1 { color: @secondary-dark; }
 h2 { color: @primary-darker; }
-.rosle { color: @primary-darker; }
 .date { color: mix(@body-font-color, @section-bg, 60%); }
 
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+/* A little subtle rounding of the header where supported */
+header { .border-radius(7px); }
+
 /* Top-level layout. */
-.content { margin: 20px auto; }
+.content { margin: 15px auto; }
 section, header { margin-bottom: 10px; }
 header { padding: 10px 20px; }
 h1, h2 { margin-bottom: 5px; }
