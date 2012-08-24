@@ -1,0 +1,100 @@
+/* Specify a simple complementary colour scheme keyed to a single primary colour. */
+@primary:           #FFC500;
+
+@primary-light:     desaturate(lighten(@primary, 15%), 15%);
+@primary-lighter:   desaturate(lighten(@primary, 30%), 30%);
+@primary-dark:      desaturate(darken(@primary, 15%), 15%);
+@primary-darker:    desaturate(darken(@primary, 30%), 30%);
+
+@secondary:         spin(@primary, 180);
+
+@secondary-light:   desaturate(lighten(@secondary, 15%), 15%);
+@secondary-lighter: desaturate(lighten(@secondary, 30%), 30%);
+@secondary-dark:    desaturate(darken(@secondary, 15%), 15%);
+@secondary-darker:  desaturate(darken(@secondary, 30%), 30%);
+
+@near-black:        #202020;
+@near-white:        #F8F8F8;
+
+@body-font-color:   @near-black;
+
+/* A selection of font-sizes for the document. */
+@body-font-size:    14px;
+@small-font-size:   12px;
+@smaller-font-size: 10px;
+@large-font-size:   18px;
+@larger-font-size:  20px;
+@huge-font-size:    22px;
+@heading-font-size: 28px;
+
+/* Basic element colours. */
+body { background-color: @near-black; color: @body-font-color; }
+a { color: @secondary-darker; }
+a:hover { color: @secondary; text-decoration: inherit; }
+section { background-color: @near-white; }
+header { background-color: @primary-lighter; }
+h1 { color: @secondary-dark; }
+.role { color: @primary-darker; }
+.date { color: lighten(@body-font-color, 30%); }
+
+/* Top-level layout. */
+.content { margin: 20px auto; }
+section, header { padding: 15px 30px; }
+h1, h2 { margin-bottom: 5px; }
+
+/* Sections and the header have a decorative border at the bottom. */
+section { border-bottom: 1px solid @primary-dark; }
+header { border-bottom: 2px solid @secondary-dark; }
+
+/* There are only two fonts used in the CV: a body text and a special heading font. */
+body { font: normal normal 300 @body-font-size 'Lato', sans-serif; }
+h1, h2, h3, h4 { font: normal normal normal @body-font-size 'Rokkitt', sans-serif; }
+.role, .date { font-weight: normal; font-size: @body-font-size; }
+
+/* Headings have special font sizes. */
+h1 { font-size: @huge-font-size; }
+h2 { font-size: @huge-font-size; }
+
+/* Specific styling within the header. */
+header h1 { font-size: @heading-font-size; margin: 0; }
+
+/* Misc. stylying for the job role, date and description entries. */
+.date { text-align: right; }
+.description { text-align: justify; margin-bottom: 10px; }
+
+/* Styling for the contact and social media information pane. */
+.contact-information { margin-left: auto; }
+.contact-type { text-align: center; padding-right: 2px; }
+.contact-type .icon { margin-top: 2px; }
+.contact-type abbr { border: none; cursor: inherit; }
+.icon-gplus { background-image: url(img/fav/gplus.png); background-position: top left; width: 16px; height: 16px; }
+.icon-github { background-image: url(img/fav/github.png); background-position: top left; width: 16px; height: 16px; }
+.accessibility-label { display: none; }
+
+/* Small screen specialisation */
+@media screen and (max-width: 767px) {
+  .contact-information { margin-left: 0px; }
+  .date { text-align: left; font-size: @small-font-size; }
+  section, header { padding: 7px 15px; }
+  h2 { font-size: @large-font-size; }
+  .description { text-align: left; }
+}
+
+/* Print media specialisation */
+@media print {
+  body { color: black; }
+  a { color: inherit; text-decoration: none; }
+  section, header { border: none; }
+  section, header { padding: 10px 0px; }
+  h2 { font-size: @large-font-size; }
+  .role { float: left !important; }
+  .date { color: @primary-darker; }
+  .role, .date { margin-bottom: 5px; }
+  .accessibility-label { display: inline; }
+  .contact-type { text-align: right; padding-right: 2px; }
+  .heading { float: left; }
+  .heading h1 { margin: 0; padding: 0; }
+}
+
+/* vim:filetype=css:tw=120
+ */
