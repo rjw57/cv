@@ -1,55 +1,55 @@
 /* Specify a simple complementary colour scheme keyed to a single primary colour. */
-@primary:           #FFC500;
+@primary:           spin(desaturate(#FFC500, 60%), 0);
 
-@primary-light:     desaturate(lighten(@primary, 15%), 15%);
-@primary-lighter:   desaturate(lighten(@primary, 30%), 30%);
-@primary-dark:      desaturate(darken(@primary, 15%), 15%);
-@primary-darker:    desaturate(darken(@primary, 30%), 30%);
+@primary-light:     mix(@primary, white, 80%);
+@primary-lighter:   mix(@primary-light, white, 80%);
+@primary-dark:      mix(@primary, black, 80%);
+@primary-darker:    mix(@primary-dark, black, 80%);
 
 @secondary:         spin(@primary, 180);
 
-@secondary-light:   desaturate(lighten(@secondary, 15%), 15%);
-@secondary-lighter: desaturate(lighten(@secondary, 30%), 30%);
-@secondary-dark:    desaturate(darken(@secondary, 15%), 15%);
-@secondary-darker:  desaturate(darken(@secondary, 30%), 30%);
+@secondary-light:   mix(@secondary, white, 80%);
+@secondary-lighter: mix(@secondary-light, white, 80%);
+@secondary-dark:    mix(@secondary, black, 80%);
+@secondary-darker:  mix(@secondary-dark, black, 80%);
 
-@near-black:        #202020;
-@near-white:        #F8F8F8;
+@section-bg:        mix(@primary, white, 1%);
+@body-bg:           @section-bg;
+@heading-bg:        mix(@primary, white, 15%);
 
-@body-font-color:   @near-black;
+@body-font-color:   lighten(black, 2%);
 
 /* A selection of font-sizes for the document. */
 @body-font-size:    14px;
-@small-font-size:   12px;
-@smaller-font-size: 10px;
-@large-font-size:   18px;
-@larger-font-size:  20px;
-@huge-font-size:    22px;
-@heading-font-size: 28px;
+@small-font-size:   (5/6) * @body-font-size;
+@smaller-font-size: (5/6) * @small-font-size;
+@large-font-size:   (6/5) * @body-font-size;
+@larger-font-size:  (6/5) * @large-font-size;
+@huge-font-size:    (6/5) * @larger-font-size;
+@heading-font-size: (6/5) * (6/5) * @huge-font-size;
 
 /* Basic element colours. */
-body { background-color: @near-black; color: @body-font-color; }
+body { background-color: @body-bg; color: @body-font-color; }
 a { color: @secondary-dark; }
-a:hover { color: @secondary-light; text-decoration: inherit; }
-section { background-color: @near-white; }
-header { background-color: @primary-lighter; }
+a:hover { color: @secondary; text-decoration: inherit; }
+section { background-color: @section-bg; }
+header { background-color: @heading-bg; }
 h1 { color: @secondary-dark; }
-.role { color: @primary-darker; }
-.date { color: lighten(@body-font-color, 30%); }
+h2 { color: @primary-darker; }
+.rosle { color: @primary-darker; }
+.date { color: mix(@body-font-color, @section-bg, 60%); }
 
 /* Top-level layout. */
 .content { margin: 20px auto; }
-section, header { padding: 15px 30px; }
+section, header { margin-bottom: 10px; }
+header { padding: 10px 20px; }
 h1, h2 { margin-bottom: 5px; }
-
-/* Sections and the header have a decorative border at the bottom. */
-section { border-bottom: 1px solid @primary-dark; }
-header { border-bottom: 2px solid @secondary-dark; }
+.role, .date { min-height: 0 !important; margin-bottom: 5px; }
 
 /* There are only two fonts used in the CV: a body text and a special heading font. */
 body { font: normal normal 300 @body-font-size 'Source Sans Pro', sans-serif; }
-h1, h2, h3, h4 { font: normal normal normal @body-font-size 'Rokkitt', sans-serif; }
-.role, .date { font-weight: normal; font-size: @body-font-size; }
+h1, h2, h3, h4 { font: normal normal 300 @body-font-size 'Source Sans Pro', sans-serif; }
+.role, { font-weight: normal; font-size: @body-font-size; }
 
 /* Headings have special font sizes. */
 h1 { font-size: @huge-font-size; }
@@ -87,8 +87,7 @@ header h1 { font-size: @heading-font-size; margin: 0; }
   section, header { padding: 10px 0px; }
   h2 { font-size: @large-font-size; }
   .role { float: left !important; }
-  .date { color: @primary-darker; }
-  .role, .date { margin-bottom: 5px; }
+  .role, .date { margin-bottom: 5px; color: black; }
   .accessibility-label { display: inline; }
   .contact-type { text-align: right; padding-right: 2px; }
   .heading { float: left; }
