@@ -23,7 +23,7 @@ $(BUILD)/%.html: %.in.html $(BUILD)
 	tidy -q -ashtml -w 0 -o "$@" "$<"
 
 $(BUILD)/%.css: %.less $(BUILD)
-	lessc --yui-compress "$<" "$@"
+	lessc --yui-compress "$<" >"$@"
 
 .PHONY: all clean deploy static
 
