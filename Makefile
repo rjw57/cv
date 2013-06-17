@@ -13,6 +13,10 @@ clean:
 static: $(BUILD)
 	rsync -r $(STATIC)/ $(BUILD)
 
+github: all
+	ghp-import "$(BUILD)"
+	git push origin gh-pages
+
 deploy: all
 	rsync -rz --chmod=Dugo+rx,ugo+r --perms $(BUILD)/ richwareham.com:/var/www/richwareham.com/htdocs/cv
 
