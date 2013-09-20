@@ -1,1 +1,230 @@
-body{background-color:#fefefd;color:#050505}a{color:#3d508f}a:hover{color:#4d64b3;text-decoration:inherit}section{background-color:#fefefd}header{background-color:#f4f0e4}h1{color:#3d508f}h2{color:#726331}.date{color:#696968}header{-webkit-border-radius:7px;-moz-border-radius:7px;border-radius:7px}.content{margin:15px auto}section,header{margin-bottom:10px}header{padding:5px 15px}h1,h2{margin-bottom:5px}.role,.date{min-height:0!important;margin-bottom:5px}body{font:normal normal 300 16px 'Source Sans Pro',sans-serif}h1,h2,h3,h4{font:normal normal 300 16px 'Source Sans Pro',sans-serif}.role{font-weight:normal;font-size:16px}h1{font-size:27.648px}h2{font-size:27.648px}header h1{font-size:33.1776px;margin:0}.subtitle{display:block;font-size:27.648px;color:#c2af70;margin-bottom:5px}.author-icon{float:left;margin:8px 10px 0 0}.author-icon img{-webkit-border-radius:7px;-moz-border-radius:7px;border-radius:7px}.contact-information{margin-top:5px;margin-bottom:5px}.date{text-align:right}.description{text-align:justify;margin-bottom:10px}.contact-information{margin-left:auto}.contact-type{text-align:center;padding-right:2px}.contact-type .icon{margin-top:2px}.contact-type abbr{border:0;cursor:inherit}.icon-gplus{background-image:url(img/fav/gplus.png);background-position:top left;width:16px;height:16px}.icon-github{background-image:url(img/fav/github.png);background-position:top left;width:16px;height:16px}.accessibility-label{display:none}@media screen and (max-width:767px){.contact-information{margin-left:0}.date{text-align:left;font-size:13.333333333333334px}section,header{padding:7px 15px}h2{font-size:19.2px}}@media print{body{color:black}a{color:inherit;text-decoration:none}section,header{border:0}section,header{padding:10px 0}h2{font-size:19.2px}.role{float:left!important}.role,.date{margin-bottom:5px;color:black}.accessibility-label{display:inline}.contact-type{text-align:right;padding-right:2px}.heading{float:left}.heading h1{margin:0;padding:0}}
+/* Specify a simple complementary colour scheme keyed to a single primary colour. */
+/* A selection of font-sizes for the document. */
+/* Basic element colours. */
+body {
+  background-color: #f6f8fb;
+  color: #040609;
+}
+footer {
+  color: #77797c;
+}
+header a {
+  color: #72314b;
+  border-bottom: none;
+}
+a {
+  color: inherit;
+  border-bottom: 1px #75b34d dotted;
+}
+a:hover {
+  color: #5e8f3d;
+  text-decoration: inherit;
+}
+section {
+  background-color: #f6f8fb;
+}
+section:nth-child(odd) {
+  background-color: #edf1f7;
+}
+header,
+footer {
+  background-color: #edf1f7;
+}
+h1 {
+  color: #72314b;
+}
+h2 {
+  color: #314b72;
+}
+h3 {
+  color: #72314b;
+}
+.role,
+.date {
+  color: #4b7231;
+}
+/* A little subtle rounding of the header and sections where supported */
+section,
+header,
+footer {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+/* Top-level layout. */
+.content {
+  margin: 15px auto;
+}
+footer {
+  text-align: right;
+}
+section,
+header,
+footer {
+  margin-bottom: 10px;
+  padding: 5px 15px;
+}
+h1,
+h2,
+h3 {
+  margin-bottom: 5px;
+}
+.role,
+.date {
+  min-height: 0 !important;
+  margin-bottom: 5px;
+}
+/* There are only two fonts used in the CV: a body text and a special heading font. */
+body {
+  font: normal normal 300 12pt 'Source Sans Pro', sans-serif;
+}
+h1,
+h2,
+h3,
+h4 {
+  font: normal normal 300 12pt 'Source Sans Pro', sans-serif;
+}
+.role {
+  font-weight: normal;
+  font-size: 12pt;
+}
+/* Headings have special font sizes. */
+footer {
+  font-size: 10.285714285714285pt;
+}
+h1 {
+  font-size: 19.05555555555556pt;
+}
+h2 {
+  font-size: 19.05555555555556pt;
+}
+h3 {
+  font-size: 14pt;
+}
+/* Specific styling within the header. */
+header h1 {
+  font-size: 22.231481481481488pt;
+  margin: 0;
+}
+.subtitle {
+  display: block;
+  font-size: 19.05555555555556pt;
+  color: #314b72;
+  margin-bottom: 5px;
+}
+.author-icon {
+  float: left;
+  margin: 8px 10px 0 0;
+}
+.author-icon img {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.contact-information {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+/* Misc. stylying for the job role, date and description entries. */
+.date {
+  text-align: right;
+}
+.description {
+  text-align: justify;
+  margin-bottom: 10px;
+}
+/* Styling for the contact and social media information pane. */
+.contact-information {
+  margin-left: auto;
+}
+.contact-type {
+  text-align: center;
+  padding-right: 2px;
+}
+.contact-type .icon {
+  margin-top: 2px;
+}
+.contact-type abbr {
+  border: none;
+  cursor: inherit;
+}
+.icon-gplus {
+  background-image: url(img/fav/gplus.png);
+  background-position: top left;
+  width: 16px;
+  height: 16px;
+}
+.icon-github {
+  background-image: url(img/fav/github.png);
+  background-position: top left;
+  width: 16px;
+  height: 16px;
+}
+.accessibility-label {
+  display: none;
+}
+/* Small screen specialisation */
+@media screen and (max-width: 767px) {
+  .contact-information {
+    margin-left: 0px;
+  }
+  .date {
+    text-align: left;
+    font-size: 10.285714285714285pt;
+  }
+  section,
+  header {
+    padding: 7px 15px;
+  }
+  h2 {
+    font-size: 14pt;
+  }
+  h3 {
+    font-size: 12pt;
+  }
+}
+/* Print media specialisation */
+@media print {
+  body {
+    color: black;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  section,
+  header {
+    border: none;
+  }
+  section,
+  header {
+    padding: 10px 0px;
+  }
+  h2 {
+    font-size: 14pt;
+  }
+  .role {
+    float: left !important;
+  }
+  .role,
+  .date {
+    margin-bottom: 5px;
+    color: black;
+  }
+  .accessibility-label {
+    display: inline;
+  }
+  .contact-type {
+    text-align: right;
+    padding-right: 2px;
+  }
+  .heading {
+    float: left;
+  }
+  .heading h1 {
+    margin: 0;
+    padding: 0;
+  }
+}
+/* vim:filetype=css:tw=120
+ */
