@@ -27,7 +27,7 @@ $(BUILD)/%.html: %.in.html.haml $(BUILD)
 	haml "$<" "$@"
 
 $(BUILD)/%.css: %.less $(BUILD)
-	lessc "$<" >"$@"
+	lessc -x "$<" >"$@"
 
 .PHONY: all clean deploy static
 
