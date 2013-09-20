@@ -1,0 +1,245 @@
+!!!
+/ This is not the source code for my CV. The source code can be found at https://github.com/rjw57/cv/.
+%html
+  %head
+    %meta{charset: "UTF-8"}/
+    %meta{content: "width=device-width, initial-scale=1, user-scalable=0", name: "viewport"}/
+    / this is simply to enable the egotistic exercise of pretending one's CV is an iPad app
+    %meta{content: "yes", name: "apple-mobile-web-app-capable"}/
+    %link{href: "https://lh6.googleusercontent.com/-qJcUc51gzIs/AAAAAAAAAAI/AAAAAAAABls/6FsGv0TBEI0/s64-c-k/photo.jpg", rel: "apple-touch-icon"}/
+    %title Richard Wareham – Curriculum Vit&aelig;
+    %link{href: "http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic", rel: "stylesheet"}/
+    %link{href: "bootstrap/css/bootstrap.min.css", media: "screen", rel: "stylesheet"}/
+    %link{href: "bootstrap/css/bootstrap-responsive.min.css", media: "screen", rel: "stylesheet"}/
+    %link{href: "cv.css", media: "screen, print", rel: "stylesheet"}/
+    /
+      If you're using IE and are looking at this, then you're clearly a recruiter. Please pass me to someone in
+      Engineering. Thanks!
+    /[if lt IE 9]
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    /[endif]
+  %body
+    .content
+      %header.container
+        .row
+          .span9.heading
+            %a.author-icon{href: "http://html5zombo.com/"}
+              %img{alt: "", src: "https://lh6.googleusercontent.com/-qJcUc51gzIs/AAAAAAAAAAI/AAAAAAAABls/6FsGv0TBEI0/s64-c-k/photo.jpg"}/
+            %h1
+              Dr Richard Wareham
+              %span.subtitle Curriculum Vitæ
+          .span3.contact-pane
+            %table.contact-information
+              %tr
+                / The email address link itself is filled in via JavaScript to make life a little harder for spammers.
+                %td.contact-type
+                  %abbr.icon.icon-envelope{title: "email address"}
+                    %span.accessibility-label Email:
+                %td
+                  / We do not use JavaScript obfuscation here because I want the page to render without JavaScript
+                  %a#email-address
+                    rj
+                    %span{style: "display:none;"}> REMOVETHIS
+                    w57
+                    / 
+                    @
+                    / 
+                    can
+                    / 
+                    tab.net
+              %tr
+                %td.contact-type
+                  %abbr.icon.icon-globe{title: "website"}
+                    %span.accessibility-label Web:
+                %td
+                  %a{href: "http://richwareham.com/"} richwareham.com
+              %tr
+                %td.contact-type
+                  %abbr.icon.icon-gplus{title: "Google plus"}
+                    %span.accessibility-label Google+:
+                %td
+                  %a{href: "https://plus.google.com/u/0/114005052144439249039/posts"} gplus.to/richwareham
+              %tr
+                %td.contact-type
+                  %abbr.icon.icon-github{title: "Github"}
+                    %span.accessibility-label Github:
+                %td
+                  %a{href: "https://github.com/rjw57"} github.com/rjw57
+      %section.container
+        .row
+          .span3
+            %h1 Employment
+          .span9
+            %h2 University of Cambridge
+            .row-fluid.job-meta
+              .span6.role
+                Research Associate,
+                %a{href: "http://www.bbsrc.ac.uk/pa/grants/AwardDetails.aspx?FundingReference=BB/G006911/1"}
+                  BBSRC LoLa
+                  grant
+              .span6.date
+                Oct. 2010 – Sep 2013
+            .description
+              Part of the Data Analysis for the LoLa single-molecule imaging team. Developed a custom suite of data
+              analysis and visualisation tools for biological imaging and tracking. Created novel image and signal
+              processing algorithms for dealing with noisy and ambiguous input. Co-ordinated geographically disparate
+              team and lead efforts to improve code quality with automated build testing tools, test suites and coding
+              standards.
+            %h2 Pneumacare Ltd
+            .row-fluid.job-meta
+              .span6.role
+                Consultant Software Engineer
+              .span6.date
+                Oct. 2009 – Oct. 2010
+            .description
+              Technology lead and inventor of the
+              %em Pneumascan
+              passive lung function monitor system. Rôle required
+              investigation and development of computer vision algorithms for real-time high-frequency 3D data capture.
+              Implemented a prototype capture and analysis system including GPU accelerated processing via CUDA. Created
+              product mock up and marketing renders using the Blender rendering suite.
+            %h2 Geomerics Ltd
+            .row-fluid.job-meta
+              .span6.role
+                Consultant Research Associate
+              .span6.date
+                Oct. 2008 – Oct. 2009
+            .description
+              Researched new algorithms for rigging and skinning 3D character models resulting in the publication of a
+              fully-automated system called
+              = succeed "." do
+                %em Bone Glow
+            .row-fluid.job-meta
+              .span6.role
+                Senior Software Engineer
+              .span6.date
+                Jun. 2006 – Jul. 2008
+            .description
+              Real-time graphics research including full physical global illumination calculations performed via GPU and
+              CPU co-operation. Developed a practical, real-world system for lighting now in use in well known game titles
+              such as
+              %em Battlefield 3
+              and
+              = succeed "." do
+                %em Need for Speed: The Run
+      %section.container
+        .row
+          .span3
+            %h1 Education
+          .span9
+            %h2 University of Cambridge
+            %h3 Department of Engineering
+            .row-fluid.job-meta
+              .span6.role
+                Doctor of Philosophy, Signal Processing
+              .span6.date
+                Oct. 2002 – Oct. 2006
+            .description
+              Researched applications of advanced mathematical geometry techniques for real-world use. Gained experience
+              in geometric interpretation of signal processing techniques, knowledge of accelerated graphics APIs and
+              developed new research in the fields of computational geometry, non-Eudlidean problem solving and fractals.
+              Thesis title:
+              = succeed "." do
+                %em Computer Graphics using Conformal Geometric Algebra
+            %h3 Robinson College
+            .row-fluid.job-meta
+              .span6.role
+                Master of Engineering, Distinction
+              .span6.date
+                Oct. 1998 – Oct. 2002
+            .description
+              Received a distinction (class I equivalent) in Information Engineering. Course scope included signal
+              processing techniques, computer graphics, artificial intelligence and software engineering.
+      %section.container
+        .row
+          .span3
+            %h1 Work Interests
+          .span9
+            %h2 Computing & Software
+            .description
+              I try to keep a broad range of technical skills up to date because, frankly, I like to play with technology
+              and writing software. In general I am quick to 'deep-dive' into a new field and find it easy to pick up new
+              programming languages and software-related skills. I find systems design extremely satisfying and am never
+              happier than when all of the metaphorical plates are kept spinning by a robot which I have designed. I am
+              particularly enthused by what has come to be called
+              = succeed "." do
+                %em agile development
+              = succeed "." do
+                %a{href: "https://plus.google.com/u/0/114005052144439249039/posts"} Google+ profile
+            %h2 Academic
+            .description
+              I am a signal processor by trade which means that I am particularly interested in the inferences one may
+              draw from data that one can observe. To this end I make heavy use of Bayesian methods such as Monte Carlo
+              sampling in order to find maximally likely
+              %em a posteriori
+              estimates of the true state of a system
+              from noisy observations of its output. My research interests are therefore wide-ranging and have wide
+              applicability. My recent interests have been in fields as diverse as computer vision and analysis and
+              inference of the dynamics of receptors on cell membranes. A
+              %a{href: "http://publications.eng.cam.ac.uk/cgi/search/advanced?screen=Public%3A%3AEPrintSearch&_action_search=Search&_fulltext__merge=ALL&_fulltext_=&title_merge=ALL&title=&creators_name_merge=ALL&creators_name=wareham&abstract_merge=ALL&abstract=&date=&keywords_merge=ALL&keywords=&subjects_merge=ANY&divisions_merge=ANY&department_merge=ALL&department=&editors_name_merge=ALL&editors_name=&refereed=EITHER&publication_merge=ALL&publication=&satisfyall=ALL&order=-date%2Fcreators_name%2Ftitle"}
+                list
+                of my publications
+              may be found on the University of Cambridge's Department of Engineering website.
+      %section.container
+        .row
+          .span3
+            %h1 Technical Skills
+          .span9
+            %h2 Languages and Libraries
+            .description
+              Extensive experience with C, C++, Python and various Unix glue languages such as sed, awk, perl and ed.
+              Experience in writing for the Gtk+ and Qt GUI toolkits. I have written at least one non-trivial program in
+              order to learn languages including Scheme, Smalltalk, Ruby, Java and C#. I class myself as a competent
+              multi-paradigm programmer who is capable of picking up any sane house language or coding style with some
+              rapidity.
+            %h2 Web-technologies
+            .description
+              Experience with HTML/CSS/JavaScript (including the latest HTML5 standards) over a wide variety of personal
+              projects including, but not limited to, this CV, an interactive Anglo-Saxon dictionary, an Old English
+              speech synthesiser, a client-side Google+ syndication system and webmaster for my group's website.
+              Developed a public-facing in-house course management system for the Department of Engineering which is used
+              to manage third and fourth year module choices. Experience with server-side programming languages such as
+              Python (WSGI), PHP, Perl (Mason) and Java servlets.
+            %h2 Computer Graphics
+            .description
+              Enthusiastic student of realistic rendering techniques. Wrote an accelerated (via SSE) path-tracing
+              renderer for Minecraft maps. Can program using both the OpenGL 2/3 and DirectX 9/10 APIs. Real-world
+              experience of writing computer graphics software and GPU acceleration.
+            %h2 High-performance Computing
+            .description
+              Member of the Many Core Computing Group in the University of Cambridge with a research interest in GPU
+              acceleration of scientific computing. As part of the LoLa project, I have ported many of our
+              compute-intensive algorithms to a multi-Tesla architecture and developed a computing engine allowing single
+              source-code compilation with CUDA and OpenMP accelerated backends. Developed a novel multi-threaded
+              Metropolis Hastings and Gibbs sampling algorithm to be published in a forthcoming paper.
+            %h2 System Administration
+            .description
+              I've been
+              %em de facto
+              system administrator in many places of work and although I would class myself
+              as a knowledgeable amateur in this field I haven't as yet lost anyone's data despite many hardware failures
+              over the years. I have created company-critical backup and restore systems along with designing a company
+              source control and quality engineering work flow.
+      %section.container
+        .row
+          .span3
+            %h1 Other Skills
+          .span9
+            %h2 Languages
+            .description
+              I enjoy languages and can speak French to a conversational level. I am currently studying Arabic,
+              Anglo-Saxon and Welsh.
+            %h2 Driving
+            .description
+              I have a full, clean UK driving license and have held it for more than ten years.
+            %h2 Design & Theatre
+            .description
+              I enjoy typographic design work and have designed many posters for theatre groups in and around Cambridge.
+              In addition, I have performed with many theatre groups and have taken several improvised comedy and comic
+              theatre shows to the Edinburgh Fringe festival. I have long ago lost any fear of public speaking.
+    :javascript
+      // This is just a way to stop the email address being trivially parseable by a spam bot. It is at best obfuscation.
+      var address = 'mail' + 'to' + ':rjw' + (32 + 25) + String.fromCharCode(64) + 'batnac'.split('').reverse().join('') + '.net';
+      document.getElementById('email-address').setAttribute('href', address);
+/
+  vim:tw=120:sw=2:et

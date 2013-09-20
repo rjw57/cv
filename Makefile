@@ -23,8 +23,8 @@ deploy: all
 $(BUILD):
 	mkdir -p $(BUILD)
 
-$(BUILD)/%.html: %.in.html $(BUILD)
-	tidy -q -ashtml -w 0 -o "$@" "$<"
+$(BUILD)/%.html: %.in.html.haml $(BUILD)
+	haml "$<" "$@"
 
 $(BUILD)/%.css: %.less $(BUILD)
 	lessc "$<" >"$@"
