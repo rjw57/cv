@@ -24,7 +24,7 @@ $(BUILD):
 	mkdir -p $(BUILD)
 
 $(BUILD)/%.html: %.in.html.haml $(BUILD)
-	haml "$<" "$@"
+	haml --style ugly "$<" "$@"
 
 $(BUILD)/%.css: %.less $(BUILD)
 	lessc -x "$<" >"$@"
